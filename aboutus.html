@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Aiyla - Turkish cuisine Restaurant</title>
+    <meta keywords="Aiyla - Turkish Restaurant" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8" />
+    <meta author="Balakrishnan" />
+    <meta description="Home page" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Toronto - Aiyla" />
+    <meta property="og:url" content="https://aiylarestaurant.ca" />
+    <meta property="og:site_name" content="Aiyla" />
+    <meta
+      property="article:publisher"
+      content="https://www.facebook.com/aiyla"
+    />
+    <link rel="icon" href="/assets/icons/favicon2.png" sizes="32x32" />
+    <link rel="stylesheet" href="styles.css?" />
+    <link rel="stylesheet" href="aboutus.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Tangerine:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/c92c32ba96.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-17284688702"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17284688702");
+    </script>
+  </head>
+  <body>
+    <section class="vertical-menu" id="vertical-menu">
+      <a href="#" id="imagemenu" onclick="show('aboutus', false)">
+        <img
+          class="small-img"
+          src="/assets/image/logo.png"
+          alt="Aiyla"
+          height="50"
+        />
+      </a>
+      <button
+        class="font-icon-btn close"
+        onclick="showHideSideMenu()"
+        id="close-button"
+      >
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#" onclick="show('/index.html#')">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" onclick="show('/menu.html')">Menu</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" onclick="show('/catering.html')">Catering</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" onclick="show('/event.html')">Book Your Event</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" onclick="show('/aboutus.html')">About Aiyla</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" onclick="show('/index.html#contact')">Contact</a>
+        </li>
+      </ul>
+    </section>
+    <header class="header">
+      <div class="inner-header">
+        <img src="/assets/image/header-design1.png" alt="" class="design1" />
+        <img src="/assets/image/header-design2.png" alt="" class="design2" />
+        <img src="/assets/image/header-design1.png" alt="" class="design3" />
+        <a
+          class="logo"
+          href="/index.html#"
+          role="presentation"
+          aria-hidden="true"
+          tabindex="-1"
+        >
+          <img
+            class="big-img"
+            src="/assets/image/logo.png"
+            alt=""
+            height="100"
+          />
+          <img
+            class="small-img"
+            src="/assets/image/logo.png"
+            alt=""
+            height="50"
+          />
+        </a>
+        <div class="top-links">
+          <ul class="container tangerine-bold">
+            <li class="address-menu-item">
+              <a href="/eindex.html#map">
+                <img src="/assets/icons/location.svg" alt="" />
+                <span>
+                  10385 Weston Road, Unit: 7, <br />Vaughan, Ontario L4H 3T4
+                </span>
+              </a>
+            </li>
+            <!-- <li class="email">
+              <img src="/assets/icons/email2.svg" alt="" />
+              <a href="mailto:info@aiylarestaurant.com">
+                info@aiylarestaurant.com
+              </a>
+            </li> -->
+            <li class="phone">
+              <img src="/assets/icons/call.svg" alt="" />
+              <a href="tel:+19053039990">+1 905-303-9990</a>
+            </li>
+          </ul>
+          <nav>
+            <ul>
+              <li>
+                <a href="/index.html#">Home</a>
+              </li>
+              <li class="vdivider">|</li>
+              <li>
+                <a href="/menu.html">Menu</a>
+              </li>
+              <li class="vdivider">|</li>
+              <li>
+                <a href="/catering.html">Catering</a>
+              </li>
+              <li class="vdivider">|</li>
+              <li>
+                <a href="/event.html">Event</a>
+              </li>
+              <li class="vdivider">|</li>
+              <li><a href="/aboutus.html">About Aiyla</a></li>
+              <li class="vdivider">|</li>
+              <li><a href="/index.html#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <button
+        id="burger-button"
+        class="font-icon-btn burger"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onclick="showHideSideMenu()"
+      >
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </button>
+    </header>
+    <main>
+      <section class="short-intro" id="short-intro">
+        <div class="overlay"></div>
+        <video loop autoplay muted class="video">
+          <source src="/assets/videos/video-aboutus.mp4" type="video/mp4" />
+        </video>
+
+        <div
+          class="video-text aos-init aos-animate"
+          data-aos="zoom-in"
+          data-aos-delay="500"
+        >
+          <h1 class="tangerine-bold title">
+            Welcome to Aiyla Turkish Cuisine, where authentic Turkish and
+            Mediterranean flavors meet warm hospitality in the heart of
+            Woodbridge.<br /><br />
+            Join us at Aiyla Turkish Cuisine and experience the true taste of
+            Turkey!
+          </h1>
+
+          <a href="#welcome-section" class="down-arrow-link">
+            <img src="/assets/icons/down-arrow-white.png" alt="" />
+          </a>
+        </div>
+      </section>
+      <section class="welcome-section" id="welcome-section">
+        <div class="welcome-text overpass-font">
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-family: &quot;Times New Roman&quot;;
+              letter-spacing: normal;
+            "
+          >
+            <h1>Aiyla Turkish Cuisine.</h1>
+            <p>
+              Welcome to Aiyla Turkish Cuisine, where authentic Turkish and
+              Mediterranean flavors meet warm hospitality in the heart of
+              Woodbridge. Inspired by the rich culinary traditions of Turkey, we
+              bring you a dining experience that celebrates fresh ingredients,
+              bold spices, and time-honored recipes passed down through
+              generations.
+              <br /><br />
+              At Aiyla Turkish Cuisine, every dish tells a story—from sizzling
+              kebabs grilled to perfection and savory meze platters to decadent
+              baklava made with love. Whether you're craving the smoky aroma of
+              Adana kebab, the creamy delight of hummus, or the comforting taste
+              of homemade lentil soup, our menu is a journey through Turkey’s
+              most beloved dishes.
+              <br /><br />
+              We take pride in creating a welcoming atmosphere where friends and
+              family can gather over delicious food, just like in a traditional
+              Turkish home. Our commitment to quality, authenticity, and
+              exceptional service ensures that every visit is a memorable one.
+              <br /><br />
+              Join us at Aiyla Turkish Cuisine and experience the true taste of
+              Turkey! <br /><br />*Afiyet olsun!* (Bon appétit!)
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        href="#"
+        role="presentation"
+        aria-hidden="true"
+        tabindex="-1"
+        style="height: 100px"
+      >
+        <img
+          class="logo-link"
+          src="/assets/image/logo.png"
+          alt=""
+          height="100"
+        />
+      </a>
+      <div>
+        <ul
+          style="
+            display: flex;
+            list-style: none;
+            color: white;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 0;
+            margin-top: 0;
+            flex-wrap: wrap;
+          "
+        >
+          <li>
+            <a href="/index.html#">Home</a>
+          </li>
+          <li class="vdivider">|</li>
+          <li>
+            <a href="/menu.html">Menu</a>
+          </li>
+          <li class="vdivider">|</li>
+          <li><a href="/aboutus.html">About Aiyla</a></li>
+          <li class="vdivider">|</li>
+          <li><a href="/index.html#contact">Contact</a></li>
+        </ul>
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          "
+        >
+          <span style="text-align: center"
+            >Copyright © 2025 - Aiyla Turkish Cuisine</span
+          >
+          <span style="text-align: center">
+            <span>Powered by </span>
+            <a
+              class="designed-by"
+              href="https://webfrontier.ca/"
+              target="_blank"
+              >Web Frontier Technologies</a
+            >
+          </span>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript">
+      function showHideSideMenu() {
+        const verticalMenu = document.getElementById("vertical-menu");
+        if (verticalMenu) {
+          verticalMenu.classList.toggle("show");
+        }
+      }
+
+      function show(name) {
+        showHideSideMenu();
+        window.location.href = name;
+      }
+    </script>
+  </body>
+</html>

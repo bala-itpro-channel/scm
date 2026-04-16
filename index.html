@@ -1,0 +1,960 @@
+<html lang="en">
+  <head>
+    <title>Sonoma Custom Millwork Inc.</title>
+    <meta keywords="Sonoma Custom Millwork Inc" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8" />
+    <meta author="Balakrishnan" />
+    <meta description="Home page" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Toronto - sonoma" />
+    <meta property="og:url" content="https://scm-inc.ca" />
+    <meta property="og:site_name" content="sonoma" />
+    <meta
+      property="article:publisher"
+      content="https://www.facebook.com/sonoma"
+    />
+    <link rel="icon" href="/assets/icons/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="styles.css?" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rammetto+One&amp;family=Tangerine:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .video-section {
+        max-height: 100svh;
+      }
+      video {
+        width: 100%;
+        height: 100svh;
+        object-fit: cover;
+      }
+      .head-and-desc {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        bottom: 0;
+        width: 100%;
+        background: rgb(59 59 59 / 40%);
+        padding: 10px;
+        padding-bottom: 60px;
+        z-index: 1;
+        div {
+          font-size: 3vh;
+          padding: 4px 30px;
+          background: #2d1a05;
+          border-radius: 15px;
+          letter-spacing: 1px;
+        }
+        h1 {
+          font-size: 9vh;
+          font-weight: 700;
+          -webkit-text-stroke: 1px #2d1a05;
+          line-height: 8vh;
+        }
+        .learnmore {
+          padding: 10px;
+          font-size: 3vh;
+          border-radius: 10px;
+          color: #2d1a05;
+          border: 1px solid #2d1a05;
+          cursor: pointer;
+          background-color: #fffafa;
+          text-decoration: none;
+        }
+        h1,
+        div,
+        .learnmore {
+          text-align: center;
+        }
+      }
+      p {
+        padding-bottom: 24px;
+      }
+      @media screen and (max-width: 767px) {
+        .head-and-desc {
+          bottom: 0;
+          padding-bottom: 30px;
+          h1 {
+            font-size: 6.5vh;
+            line-height: 7vh;
+          }
+          div {
+            font-size: 2.5vh;
+          }
+        }
+      }
+      .section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .container-header {
+          background: #e8e8e8;
+          position: relative;
+          .img-header {
+            width: 100%;
+            object-fit: cover;
+            height: 40svh;
+            object-position: left;
+            clip-path: polygon(100% 0, 100% 67%, 0 100%, 0 0);
+          }
+          .img-header.service {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+          }
+          .img-header.portfolio {
+            clip-path: polygon(100% 0, 100% 67%, 0 100%, 0 0);
+          }
+          .title-bar {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            font-size: 6svh;
+            color: white;
+            -webkit-text-stroke: 1px #454849;
+            font-weight: 800;
+            font-family: sans-serif;
+            padding: 0 10px;
+          }
+          .title-bar.services {
+            left: 0;
+            bottom: 0;
+          }
+        }
+        .text-container {
+          padding: 20px;
+          text-align: justify;
+          word-wrap: break-word;
+          word-break: break-word;
+          max-width: 1200px;
+          display: flex;
+          flex-direction: column;
+          align-self: center;
+          line-height: 30px;
+          color: #4f504c;
+          padding-top: 30px;
+          .sample-images {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-bottom: 24px;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+            img {
+              max-width: 300px;
+              border-radius: 10px;
+              border: 2px solid #2d1a05;
+              flex-shrink: 1;
+              min-height: 100%;
+              height: 100%;
+              width: 100%;
+            }
+          }
+          .contact-icons {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+        }
+        .text-container.contact {
+          gap: 20px;
+          flex-direction: column;
+          .contact-social-media {
+            display: flex;
+            gap: 20px;
+          }
+        }
+        .text-container {
+          .full-gallery {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      header {
+        .contact {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+        }
+      }
+      footer {
+        .menu {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          padding-bottom: 20px;
+          flex-wrap: wrap;
+        }
+      }
+      a {
+        color: white;
+        text-decoration: underline;
+        text-underline-offset: 4px;
+      }
+
+      body {
+        font-size: 16px;
+        font-family: sans-serif;
+        color: black;
+      }
+
+      .header-topbar {
+        background: #262727;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: white;
+        width: 100%;
+      }
+
+      .header-topbar-inner {
+        width: 100%;
+        max-width: 1200px;
+        padding: 0 26px;
+        display: flex;
+        gap: 20px;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 16px;
+      }
+
+      .header-topbar-text {
+        display: flex;
+        align-items: center;
+        color: #f2efef;
+      }
+
+      .topbar-link {
+        text-decoration: none;
+      }
+
+      .hero-banner {
+        width: 100%;
+        background: url(/assets/images/woodbg.jpg);
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: 100% auto;
+      }
+
+      .hero-banner-inner {
+        max-width: 1200px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .hero-logo {
+        width: 240px;
+        padding: 20px;
+      }
+
+      .hero-menu-label {
+        color: white;
+        display: flex;
+        align-self: end;
+      }
+
+      .burger-toggle {
+        position: fixed;
+        width: 7svh;
+        height: 7svh;
+        background: white;
+        border: 0;
+        border-radius: 5px;
+        top: 20px;
+        right: 20px;
+        opacity: 0.8;
+        z-index: 1000;
+      }
+
+      .burger-toggle img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .page-main {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+      }
+
+      .portfolio-header {
+        background: #e8e8e8;
+      }
+
+      .contact-panel {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 5px;
+      }
+
+      .map-wrapper {
+        min-height: 300px;
+      }
+
+      .footer-site {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #323231;
+        color: #fffafa;
+        padding: 20px;
+      }
+
+      .footer-text-center {
+        text-align: center;
+        padding-bottom: 10px;
+      }
+
+      .footer-link {
+        color: #fffafa;
+      }
+
+      .footer-caption {
+        text-align: center;
+      }
+
+      .icon-highlight.green {
+        color: yellowgreen;
+      }
+
+      .icon-highlight.yellow {
+        color: yellow;
+      }
+
+      .iframe-reset {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        display: block;
+      }
+
+      .hidden-iframe {
+        display: none;
+        visibility: hidden;
+      }
+
+      .slider {
+        position: relative;
+        width: 100%;
+        max-width: 1200px;
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+      }
+
+      .slider-track {
+        display: flex;
+        transition: transform 0.6s ease;
+        will-change: transform;
+      }
+
+      .slide {
+        min-width: 100%;
+        position: relative;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 55vh;
+        object-fit: cover;
+        display: block;
+      }
+
+      .slide-overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 24px;
+        background: rgba(0, 0, 0, 0.45);
+        color: #fff;
+        backdrop-filter: blur(4px);
+      }
+
+      .slide-overlay h2 {
+        margin-bottom: 10px;
+        font-size: clamp(2rem, 3vw, 3rem);
+        line-height: 1.1;
+        letter-spacing: 0.05em;
+      }
+
+      .slide-overlay p {
+        max-width: 800px;
+        line-height: 1.6;
+      }
+
+      .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        color: #2d1a05;
+        cursor: pointer;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+        z-index: 2;
+      }
+
+      .slider-arrow.prev {
+        left: 16px;
+      }
+
+      .slider-arrow.next {
+        right: 16px;
+      }
+
+      @media screen and (max-width: 767px) {
+        .slide img {
+          height: 40vh;
+        }
+
+        .slide-overlay {
+          padding: 18px;
+        }
+
+        .slide-overlay h2 {
+          font-size: 1.9rem;
+        }
+
+        .slider-arrow {
+          width: 38px;
+          height: 38px;
+          font-size: 1.3rem;
+        }
+      }
+    </style>
+    <!-- Google Tag Manager -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-T4SKP733");
+    </script>
+    <!-- End Google Tag Manager -->
+  </head>
+  <body>
+    <header>
+      <div class="header-topbar">
+        <div class="header-topbar-inner">
+          <span class="header-topbar-text">Have any questions?</span>
+          <a href="tel:+14162558060" class="topbar-link">
+            <div class="contact">
+              <span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon-highlight green"
+                >
+                  <path
+                    d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V21c0 .55-.45 1-1 1C10.07 22 2 13.93 2 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  ></path></svg></span
+              ><span>(416) 255-8060</span>
+            </div>
+          </a>
+
+          <a href="mailto:info@scm-inc.ca" class="topbar-link">
+            <div class="contact">
+              <span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon-highlight yellow"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                  ></path></svg></span
+              ><span>Info@scm-inc.ca</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="hero-banner">
+        <div class="hero-banner-inner">
+          <img class="hero-logo" src="/assets/images/logo-new-sm.png" alt="" />
+          <div class="hero-menu-label">Menu</div>
+        </div>
+      </div>
+
+      <button
+        id="burger-button"
+        class="font-icon-btn burger burger-toggle"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="#navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        onclick="showHideSideMenu()"
+      >
+        <img class="burger-img" src="/assets/icons/burger.svg" alt="" />
+      </button>
+    </header>
+    <main class="page-main">
+      <div class="slider">
+        <div class="slider-track">
+          <div class="slide">
+            <img
+              src="/assets/images/aboutus/1.jpg"
+              alt="Custom architectural millwork"
+            />
+            <div class="slide-overlay">
+              <h2>Sonoma Custom Millwork Inc.</h2>
+              <p>
+                Precision millwork and metal fabrication that transforms
+                residential and commercial interiors with craftsmanship and
+                detail.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="/assets/images/aboutus/3.jpg"
+              alt="Custom cabinetry project"
+            />
+            <div class="slide-overlay">
+              <h2>Sonoma Custom Millwork Inc.</h2>
+              <p>
+                Designed for quality, built for durability, and finished with
+                premium materials.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="/assets/images/services/1.jpg"
+              alt="Commercial millwork service"
+            />
+            <div class="slide-overlay">
+              <h2>Sonoma Custom Millwork Inc.</h2>
+              <p>
+                Expert fabrication and installation services for every project
+                size.
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="/assets/images/portfolio/6.jpg"
+              alt="Portfolio highlight"
+            />
+            <div class="slide-overlay">
+              <h2>Sonoma Custom Millwork Inc.</h2>
+              <p>
+                Bringing architectural vision to life with precision and style.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="slider-arrow prev" aria-label="Previous slide">
+          &#10094;
+        </button>
+        <button class="slider-arrow next" aria-label="Next slide">
+          &#10095;
+        </button>
+      </div>
+      <section id="about-us" class="section">
+        <div class="container-header">
+          <img src="/assets/images/aboutus/2.jpg" alt="" class="img-header" />
+          <div class="title-bar">About Us</div>
+        </div>
+        <div class="text-container">
+          <p>
+            At SCM Inc., we specialize in delivering custom architectural
+            millwork and metal work solutions that bring design concepts to life
+            with precision and craftsmanship. Serving both residential and
+            commercial projects, we combine advanced fabrication techniques with
+            skilled artistry to create high-quality, durable, and visually
+            refined results.
+          </p>
+          <div class="sample-images">
+            <img src="/assets/images/aboutus/1.jpg" alt="" />
+            <img src="/assets/images/aboutus/3.jpg" alt="" />
+            <img src="/assets/images/aboutus/2.jpg" alt="" />
+          </div>
+          <p>
+            Guided by our motto, “Finest in Architectural Millwork and Metal
+            Work,” we are committed to producing bespoke millwork, custom
+            cabinetry, and metal fabrication that seamlessly blend functionality
+            with timeless design. Every project is executed with meticulous
+            attention to detail, ensuring superior quality and long-lasting
+            performance.
+          </p>
+          <p>
+            Our team of experienced professionals collaborates closely with
+            architects, interior designers, builders, and project managers to
+            transform ideas into reality. From custom woodwork, feature walls,
+            and built-in cabinetry to decorative metal panels, railings, and
+            structural metal elements, we deliver tailored solutions that align
+            with each client’s vision and project requirements.
+          </p>
+          <p>
+            What sets SCM Inc. apart is our end-to-end approach to design,
+            fabrication, and installation. We manage every stage of the
+            process—from initial consultation and shop drawings to production
+            and on-site installation—maintaining strict quality control and
+            ensuring projects are completed on time and within budget.
+          </p>
+          <p>
+            We are driven by a commitment to excellence, reliability, and
+            customer satisfaction. By using premium materials and industry best
+            practices, we deliver custom millwork and metal fabrication services
+            that not only meet but exceed expectations.
+          </p>
+          <p>
+            Whether enhancing a modern commercial environment or crafting a
+            sophisticated residential interior, SCM Inc. is dedicated to
+            creating spaces that are functional, elegant, and built to stand the
+            test of time.
+          </p>
+        </div>
+      </section>
+      <section id="services" class="section services">
+        <div class="container-header">
+          <img
+            src="/assets/images/services/1.jpg"
+            alt=""
+            class="img-header service"
+          />
+          <div class="title-bar services">Services</div>
+        </div>
+        <div class="text-container">
+          <p>
+            At SCM Inc., we offer a full spectrum of custom architectural
+            millwork and metal fabrication services tailored for residential,
+            commercial, and institutional spaces. From bespoke cabinetry, wall
+            paneling, reception desks, and architectural wood elements to
+            decorative metal panels, railings, staircases, and custom fixtures,
+            our work blends precision craftsmanship with innovative design and
+            high-quality finishes.
+          </p>
+          <div class="sample-images">
+            <img src="/assets/images/services/1.jpg" alt="" />
+            <img src="/assets/images/services/3.jpg" alt="" />
+            <img src="/assets/images/services/2.jpg" alt="" />
+          </div>
+          <p>
+            We partner closely with architects, designers, and clients to
+            deliver seamless design-build solutions—from consultation and
+            material selection to prototyping and full project management.
+            Whether it’s office interiors, retail environments, hospitality
+            spaces, or high-end homes, our team ensures expert installation,
+            meticulous finishing, and on-time project completion.
+          </p>
+        </div>
+      </section>
+      <section id="portfolio" class="section portfolio">
+        <div class="container-header portfolio-header">
+          <img
+            src="/assets/images/portfolio/3.jpg"
+            alt=""
+            class="img-header portfolio"
+          />
+          <div class="title-bar">Portfolio</div>
+        </div>
+        <div class="text-container">
+          <p>
+            At SCM Inc., we turn ideas into reality through thoughtful design
+            and skilled craftsmanship. Explore our portfolio of projects
+            completed with care, precision, and a strong focus on quality.
+          </p>
+          <div class="sample-images">
+            <img src="/assets/images/aboutus/1.jpg" alt="" />
+            <img src="/assets/images/aboutus/3.jpg" alt="" />
+            <img src="/assets/images/aboutus/2.jpg" alt="" />
+            <img src="/assets/images/services/1.jpg" alt="" />
+            <img src="/assets/images/services/3.jpg" alt="" />
+            <img src="/assets/images/services/2.jpg" alt="" />
+            <img src="/assets/images/portfolio/6.jpg" alt="" />
+            <img src="/assets/images/portfolio/3.jpg" alt="" />
+            <img src="/assets/images/portfolio/2.jpg" alt="" />
+          </div>
+          <div class="full-gallery">
+            <span>Visit our &nbsp;</span>
+            <a href="/gallery" target="_blank">Full Image Gallery</a>
+          </div>
+        </div>
+      </section>
+      <section id="contact-us" class="section contact">
+        <div class="container-header">
+          <img
+            src="/assets/images/contact-us.jpg"
+            alt=""
+            class="img-header service"
+          />
+          <div class="title-bar services">Contact Us</div>
+        </div>
+        <div class="text-container contact">
+          <div>
+            We’re here to help and would love to hear from you. Please reach out
+            with your questions, ideas, or feedback anytime. Our team is ready
+            to respond promptly and ensure you get the support you need.
+          </div>
+          <div class="contact-panel">
+            <div class="contact-icons">
+              <span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                  ></path></svg></span
+              ><span>49 Bakersfield St, Toronto, ON M3J 1Z4</span>
+            </div>
+            <div class="contact-icons">
+              <span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V21c0 .55-.45 1-1 1C10.07 22 2 13.93 2 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                  ></path></svg></span
+              ><span>(416) 255-8060</span>
+            </div>
+            <div class="contact-icons">
+              <span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M19 7V3H5v4H3v10h4v4h10v-4h4V7h-2zM7 5h10v2H7V5zm8 14H9v-4h6v4zm4-6H5V9h14v4z"
+                  ></path></svg></span
+              ><span>(416) 255-2557</span>
+            </div>
+            <div class="contact-icons">
+              <span
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                  ></path></svg></span
+              ><span>Info@scm-inc.ca</span>
+            </div>
+            <div class="contact-social-media">
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.88h-2.35v6.99A10 10 0 0 0 22 12"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v14H0V8zm7.5 0h4.7v1.9h.07c.66-1.25 2.27-2.57 4.67-2.57C21.42 7.33 24 9.52 24 13.88V22h-5v-7.1c0-1.7-.03-3.88-2.36-3.88-2.36 0-2.72 1.84-2.72 3.75V22h-5V8z"
+                  ></path>
+                </svg>
+              </div>
+              <div>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.96-2.36-1.02C16.8 2.5 12 2.5 12 2.5h0s-4.8 0-8.2.32c-.46.06-1.46.07-2.36 1.02C.73 4.56.5 6.2.5 6.2S0 8.12 0 10.04v1.92c0 1.92.5 3.84.5 3.84s.23 1.64.94 2.36c.9.95 2.08.92 2.6 1.02 1.9.18 8.06.32 8.06.32s4.8 0 8.2-.32c.46-.06 1.46-.07 2.36-1.02.71-.72.94-2.36.94-2.36s.5-1.92.5-3.84v-1.92c0-1.92-.5-3.84-.5-3.84zM9.75 14.5v-5l5 2.5-5 2.5z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.8002815200407!2d-79.48219092442976!3d43.756243971097376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31fb11bb5241%3A0xe4b8b8a3bbad15bf!2s49%20Bakersfield%20St%2C%20Toronto%2C%20ON%20M3J%201Z4!5e0!3m2!1sen!2sca!4v1775909967476!5m2!1sen!2sca"
+          width="100%"
+          height="300px"
+          class="iframe-reset"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="footer-site">
+        <div class="menu">
+          <a href="#intro">Home</a><span>|</span>
+          <a href="#about-us">About Us</a><span>|</span>
+          <a href="#services">Services</a><span>|</span>
+          <a href="#portfolio">Portfolio</a><span>|</span>
+          <a href="#contact-us">Contact Us</a>
+        </div>
+        <span class="footer-text-center">Copyright © 2025 - SCM Inc.</span>
+        <span class="footer-caption">
+          <span>Powered by </span>
+          <a
+            class="designed-by footer-link"
+            href="https://webfrontier.ca/"
+            target="_blank"
+            >Web Frontier Technologies</a
+          >
+        </span>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        const track = document.querySelector(".slider-track");
+        const slides = document.querySelectorAll(".slide");
+        const prevButton = document.querySelector(".slider-arrow.prev");
+        const nextButton = document.querySelector(".slider-arrow.next");
+        let currentIndex = 0;
+        let autoAdvance = null;
+
+        function showSlide(index) {
+          currentIndex = (index + slides.length) % slides.length;
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function startAutoAdvance() {
+          clearInterval(autoAdvance);
+          autoAdvance = setInterval(() => showSlide(currentIndex + 1), 3000);
+        }
+
+        if (track && slides.length > 0) {
+          prevButton.addEventListener("click", function () {
+            showSlide(currentIndex - 1);
+            startAutoAdvance();
+          });
+
+          nextButton.addEventListener("click", function () {
+            showSlide(currentIndex + 1);
+            startAutoAdvance();
+          });
+
+          startAutoAdvance();
+        }
+      })();
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-T4SKP733"
+        height="0"
+        width="0"
+        class="hidden-iframe"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  </body>
+</html>
