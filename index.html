@@ -261,7 +261,8 @@
       }
 
       .hero-banner-inner {
-        max-width: 1200px;
+        max-width: 100svw;
+        height: auto;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -366,11 +367,11 @@
       .slider {
         position: relative;
         width: 100%;
-        max-width: 1200px;
-        margin: 20px auto;
+        margin: 0 auto;
         overflow: hidden;
-        border-radius: 16px;
+        border-radius: 0;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+        height: calc(100svh - 184px);
       }
 
       .slider-track {
@@ -382,13 +383,15 @@
       .slide {
         min-width: 100%;
         position: relative;
+        height: calc(100svh - 184px);
       }
 
       .slide img {
         width: 100%;
-        height: 55vh;
+        height: 100svh;
         object-fit: cover;
         display: block;
+        height: calc(100svh - 184px);
       }
 
       .slide-overlay {
@@ -397,7 +400,7 @@
         right: 0;
         bottom: 0;
         padding: 24px;
-        background: rgba(0, 0, 0, 0.45);
+        background: rgba(0, 0, 0, 0.15);
         color: #fff;
         backdrop-filter: blur(4px);
       }
@@ -443,7 +446,7 @@
 
       @media screen and (max-width: 767px) {
         .slide img {
-          height: 40vh;
+          height: calc(100svh - 184px);
         }
 
         .slide-overlay {
