@@ -1,3 +1,79 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  background: #f9f5f0;
+}
+
+header {
+  .topbar-content {
+    display: flex;
+    padding: 0 15px;
+    gap: 20px;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .contact-social-media {
+    display: flex;
+    padding: 0 15px;
+    gap: 14px;
+    align-items: center;
+  }
+}
+
+main {
+  .slider-track {
+    transform: translateX(-300%);
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  .map-wrapper {
+    max-width: 1200px;
+    align-self: center;
+    width: 100%;
+  }
+}
+
+/* About Us page styles */
+.welcome-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Times New Roman";
+  letter-spacing: normal;
+}
+
+.logo-height {
+  height: 100px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  color: white;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}

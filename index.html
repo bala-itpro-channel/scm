@@ -319,6 +319,7 @@
       }
 
       .hero-menu-label {
+        color: white;
         display: flex;
         align-self: end;
         padding: 0 0 8px 0;
@@ -795,23 +796,14 @@
     </script>
     <!-- End Google Tag Manager -->
   </head>
-  <body style="background: #f9f5f0">
+  <body>
     <!-- Skip to Main Content Link -->
     <a href="#page-main" class="skip-link">Skip to main content</a>
 
     <header>
       <div class="header-topbar">
         <div class="header-topbar-inner">
-          <div
-            style="
-              display: flex;
-              padding: 0 15px;
-              display: flex;
-              gap: 20px;
-              align-items: center;
-              font-size: 15px;
-            "
-          >
+          <div class="topbar-content">
             <span class="header-topbar-text hide-for-mobile"
               >Have any questions?</span
             >
@@ -853,17 +845,7 @@
             </a>
           </div>
           <div>
-            <div
-              class="contact-social-media"
-              style="
-                display: flex;
-                padding: 0 15px;
-                display: flex;
-                gap: 14px;
-                align-items: center;
-                /* font-size: 25px; */
-              "
-            >
+            <div class="contact-social-media">
               <a
                 href="https://www.facebook.com/sonoma"
                 aria-label="Visit our Facebook page"
@@ -947,10 +929,9 @@
             id="navbarSupportedContent-new"
             class="hero-menu-label hide-for-mobile"
           >
-            <a href="#intro">Home</a>
-            <a href="#about-us">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#intro">Home</a> | <a href="#about-us">About Us</a> |
+            <a href="#services">Services</a> |
+            <a href="#portfolio">Portfolio</a> |
             <a href="#contact-us">Contact Us</a>
           </nav>
         </div>
@@ -996,7 +977,7 @@
     </header>
     <main class="page-main" id="page-main">
       <div class="slider">
-        <div class="slider-track" style="transform: translateX(-300%)">
+        <div class="slider-track">
           <div class="slide">
             <img
               src="/assets/images/aboutus/1.jpg"
@@ -1337,11 +1318,8 @@
         </div>
       </section>
     </main>
-    <footer style="display: flex; flex-direction: column">
-      <div
-        class="map-wrapper"
-        style="max-width: 1200px; align-self: center; width: 100%"
-      >
+    <footer>
+      <div class="map-wrapper">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.8002815200407!2d-79.48219092442976!3d43.756243971097376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31fb11bb5241%3A0xe4b8b8a3bbad15bf!2s49%20Bakersfield%20St%2C%20Toronto%2C%20ON%20M3J%201Z4!5e0!3m2!1sen!2sca!4v1775909967476!5m2!1sen!2sca"
           width="100%"
