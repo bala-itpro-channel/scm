@@ -356,27 +356,41 @@
 
       .side-menu-close {
         position: absolute;
-        top: 18px;
-        right: 18px;
-        width: 42px;
-        height: 42px;
+        top: 16px;
+        right: 16px;
+        width: 52px;
+        height: 52px;
         border: none;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.96);
         color: #3f2a13;
-        font-size: 1.35rem;
-        font-weight: 700;
         cursor: pointer;
-        box-shadow: 0 12px 22px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
         transition:
           transform 0.2s ease,
-          background 0.2s ease;
+          background 0.2s ease,
+          box-shadow 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .side-menu-close svg {
+        width: 28px;
+        height: 28px;
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
       }
 
       .side-menu-close:hover,
       .side-menu-close:focus {
         background: #ffffff;
-        transform: translateY(-1px);
+        transform: scale(1.08);
+        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
       }
 
       .side-menu.active {
@@ -705,7 +719,10 @@
           aria-label="Close menu"
           onclick="showHideSideMenu()"
         >
-          ×
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
         </button>
         <div class="menu-logo">
           <img
