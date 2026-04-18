@@ -239,15 +239,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px;
+        padding: 8px;
         color: white;
         width: 100%;
+        a {
+          color: #d3d2d2;
+        }
       }
 
       .header-topbar-inner {
         width: 100%;
         max-width: 1200px;
-        padding: 0 26px;
+        padding: 0 15px;
         display: flex;
         gap: 20px;
         justify-content: flex-start;
@@ -267,17 +270,16 @@
 
       .hero-banner {
         width: 100%;
-        background: url(/assets/images/woodbg.jpg);
-        height: 120px;
+        background: url(/assets/images/woodbg3.jpg);
+        height: 100px;
         display: flex;
         align-items: center;
         justify-content: center;
-        background-size: 100% auto;
       }
 
       .hero-banner-inner {
-        max-width: 100svw;
-        height: auto;
+        max-width: 1200px;
+        height: 100px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -289,20 +291,30 @@
       }
 
       .hero-menu-label {
-        color: white;
         display: flex;
         align-self: end;
+        padding: 0 0 8px 0;
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 0 12px;
+        }
+        a:hover,
+        a:focus {
+          color: rgb(196, 196, 196);
+          text-decoration: underline;
+        }
       }
 
       .burger-toggle {
         position: fixed;
-        width: 7svh;
-        height: 7svh;
+        width: 5svh;
+        height: 5svh;
         background: white;
         border: 0;
         border-radius: 5px;
-        top: 20px;
-        right: 20px;
+        top: 12px;
+        right: 12px;
         opacity: 0.8;
         z-index: 1000;
       }
@@ -310,6 +322,39 @@
       .burger-toggle img {
         width: 100%;
         height: 100%;
+      }
+
+      .side-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(320px, 80vw);
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: -4px 0 32px rgba(0, 0, 0, 0.18);
+        padding: 100px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        transform: translateX(100%);
+        transition: transform 0.25s ease;
+        z-index: 999;
+      }
+
+      .side-menu.active {
+        transform: translateX(0);
+      }
+
+      .side-menu a {
+        color: #2d1a05;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 700;
+      }
+
+      .side-menu a:hover,
+      .side-menu a:focus {
+        text-decoration: underline;
       }
 
       .page-main {
@@ -386,7 +431,7 @@
         overflow: hidden;
         border-radius: 0;
         box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
-        height: calc(100svh - 184px);
+        height: calc(100svh - 140px);
       }
 
       .slider-track {
@@ -398,7 +443,7 @@
       .slide {
         min-width: 100%;
         position: relative;
-        height: calc(100svh - 184px);
+        height: calc(100svh - 140px);
       }
 
       .slide img {
@@ -406,7 +451,7 @@
         height: 100svh;
         object-fit: cover;
         display: block;
-        height: calc(100svh - 184px);
+        height: calc(100svh - 140px);
       }
 
       .slide-overlay {
@@ -461,7 +506,7 @@
 
       @media screen and (max-width: 767px) {
         .slide img {
-          height: calc(100svh - 184px);
+          height: calc(100svh - 140px);
         }
 
         .slide-overlay {
@@ -492,48 +537,13 @@
           }
         }
       }
+      @media screen and (max-width: 767px) {
+        .hide-for-mobile {
+          display: none;
+        }
+      }
     </style>
     <!-- Google Tag Manager -->
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
-    <script
-      async=""
-      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
-    ></script>
     <script
       async=""
       src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
@@ -556,7 +566,9 @@
     <header>
       <div class="header-topbar">
         <div class="header-topbar-inner">
-          <span class="header-topbar-text">Have any questions?</span>
+          <span class="header-topbar-text hide-for-mobile"
+            >Have any questions?</span
+          >
           <a href="tel:+14162558060" class="topbar-link">
             <div class="contact">
               <span
@@ -574,7 +586,7 @@
             </div>
           </a>
 
-          <a href="mailto:info@scm-inc.ca" class="topbar-link">
+          <a href="mailto:info@scm-inc.ca" class="topbar-link hide-for-mobile">
             <div class="contact">
               <span
                 ><svg
@@ -592,10 +604,19 @@
           </a>
         </div>
       </div>
-      <div class="hero-banner">
+      <div id="intro" class="hero-banner">
         <div class="hero-banner-inner">
           <img class="hero-logo" src="/assets/images/logo-new-sm.png" alt="" />
-          <div class="hero-menu-label">Menu</div>
+          <nav
+            id="navbarSupportedContent"
+            class="hero-menu-label hide-for-mobile"
+          >
+            <a href="#intro">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact-us">Contact Us</a>
+          </nav>
         </div>
       </div>
 
@@ -612,6 +633,13 @@
       >
         <img class="burger-img" src="/assets/icons/burger.svg" alt="" />
       </button>
+      <nav id="navbarSupportedContent" class="side-menu" aria-expanded="false">
+        <a href="#intro">Home</a>
+        <a href="#about-us">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact-us">Contact Us</a>
+      </nav>
     </header>
     <main class="page-main">
       <div class="slider">
@@ -996,6 +1024,30 @@
           startAutoAdvance();
         }
       })();
+    </script>
+    <script>
+      function showHideSideMenu() {
+        const menu = document.getElementById("navbarSupportedContent");
+        const button = document.getElementById("burger-button");
+        const isOpen = menu.classList.toggle("active");
+        menu.setAttribute("aria-expanded", isOpen);
+        button.setAttribute("aria-expanded", isOpen);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const menu = document.getElementById("navbarSupportedContent");
+        const button = document.getElementById("burger-button");
+        if (!menu || !button) {
+          return;
+        }
+        menu.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", function () {
+            menu.classList.remove("active");
+            menu.setAttribute("aria-expanded", false);
+            button.setAttribute("aria-expanded", false);
+          });
+        });
+      });
     </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript
