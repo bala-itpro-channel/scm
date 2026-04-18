@@ -106,9 +106,13 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        background: white;
+        max-width: 1200px;
+        align-self: center;
         .container-header {
           background: #e8e8e8;
           position: relative;
+          border-bottom: 1px solid lightgray;
           .img-header {
             width: 100%;
             object-fit: cover;
@@ -183,11 +187,19 @@
           }
         }
         .text-container {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
           .full-gallery {
             display: flex;
             align-items: center;
             justify-content: center;
           }
+        }
+        .text-container.services {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
         }
       }
       header {
@@ -205,10 +217,13 @@
           gap: 20px;
           padding-bottom: 20px;
           flex-wrap: wrap;
+          a {
+            color: white;
+          }
         }
       }
       a {
-        color: white;
+        color: gray;
         text-decoration: underline;
         text-underline-offset: 4px;
       }
@@ -463,8 +478,30 @@
           font-size: 1.3rem;
         }
       }
+      .service-item {
+        display: flex;
+        gap: 20px;
+        div {
+          width: 50%;
+          img {
+            width: 100%;
+            border-radius: 4px;
+            object-fit: cover;
+            padding-top: 8px;
+            max-height: 360px;
+          }
+        }
+      }
     </style>
     <!-- Google Tag Manager -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
     <script
       async=""
       src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
@@ -515,7 +552,7 @@
     </script>
     <!-- End Google Tag Manager -->
   </head>
-  <body>
+  <body style="background: lightgray">
     <header>
       <div class="header-topbar">
         <div class="header-topbar-inner">
@@ -578,7 +615,7 @@
     </header>
     <main class="page-main">
       <div class="slider">
-        <div class="slider-track">
+        <div class="slider-track" style="transform: translateX(-300%)">
           <div class="slide">
             <img
               src="/assets/images/aboutus/1.jpg"
@@ -632,12 +669,8 @@
             </div>
           </div>
         </div>
-        <button class="slider-arrow prev" aria-label="Previous slide">
-          &#10094;
-        </button>
-        <button class="slider-arrow next" aria-label="Next slide">
-          &#10095;
-        </button>
+        <button class="slider-arrow prev" aria-label="Previous slide">❮</button>
+        <button class="slider-arrow next" aria-label="Next slide">❯</button>
       </div>
       <section id="about-us" class="section">
         <div class="container-header">
@@ -646,53 +679,23 @@
         </div>
         <div class="text-container">
           <p>
-            At SCM Inc., we specialize in delivering custom architectural
-            millwork and metal work solutions that bring design concepts to life
-            with precision and craftsmanship. Serving both residential and
-            commercial projects, we combine advanced fabrication techniques with
-            skilled artistry to create high-quality, durable, and visually
-            refined results.
+            Founded in 2011, by Kiran Bhavsar &amp; Mohan Chelliah, 2 Highly
+            experienced Pioneers in Millwork with over 30 years experience for
+            each of them. With highly experienced craftsmen,
+            <b>Sonoma Custom Millwork INC.</b> delivers high-quality, custom
+            fixtures for High end retail, commercial spaces, condominiums,
+            hotels, Restaurants and custom residences. Based in TORONTO,
+            Ontario, our workshop blends traditional craftsmanship with advanced
+            CNC technology to create precision-built, durable fixtures. For
+            Clients through out Canada and USA – Mainly New York, Houston,
+            Miami, Atlanta, Boston, Washinton DC, for Our Repeat Clients &amp;
+            Customers.
           </p>
           <div class="sample-images">
             <img src="/assets/images/aboutus/1.jpg" alt="" />
             <img src="/assets/images/aboutus/3.jpg" alt="" />
             <img src="/assets/images/aboutus/2.jpg" alt="" />
           </div>
-          <p>
-            Guided by our motto, “Finest in Architectural Millwork and Metal
-            Work,” we are committed to producing bespoke millwork, custom
-            cabinetry, and metal fabrication that seamlessly blend functionality
-            with timeless design. Every project is executed with meticulous
-            attention to detail, ensuring superior quality and long-lasting
-            performance.
-          </p>
-          <p>
-            Our team of experienced professionals collaborates closely with
-            architects, interior designers, builders, and project managers to
-            transform ideas into reality. From custom woodwork, feature walls,
-            and built-in cabinetry to decorative metal panels, railings, and
-            structural metal elements, we deliver tailored solutions that align
-            with each client’s vision and project requirements.
-          </p>
-          <p>
-            What sets SCM Inc. apart is our end-to-end approach to design,
-            fabrication, and installation. We manage every stage of the
-            process—from initial consultation and shop drawings to production
-            and on-site installation—maintaining strict quality control and
-            ensuring projects are completed on time and within budget.
-          </p>
-          <p>
-            We are driven by a commitment to excellence, reliability, and
-            customer satisfaction. By using premium materials and industry best
-            practices, we deliver custom millwork and metal fabrication services
-            that not only meet but exceed expectations.
-          </p>
-          <p>
-            Whether enhancing a modern commercial environment or crafting a
-            sophisticated residential interior, SCM Inc. is dedicated to
-            creating spaces that are functional, elegant, and built to stand the
-            test of time.
-          </p>
         </div>
       </section>
       <section id="services" class="section services">
@@ -704,29 +707,71 @@
           />
           <div class="title-bar services">Services</div>
         </div>
-        <div class="text-container">
+        <div class="text-container services">
           <p>
-            At SCM Inc., we offer a full spectrum of custom architectural
-            millwork and metal fabrication services tailored for residential,
-            commercial, and institutional spaces. From bespoke cabinetry, wall
-            paneling, reception desks, and architectural wood elements to
-            decorative metal panels, railings, staircases, and custom fixtures,
-            our work blends precision craftsmanship with innovative design and
-            high-quality finishes.
+            We provide end-to-end
+            <b>custom millwork and retail fixture solutions,</b> seamlessly
+            integrating design, manufacturing, installation, and distribution
+            under one roof. From concept to completion, our team delivers
+            <b
+              >precision craftsmanship, innovative design, and reliable
+              execution</b
+            >
+            for commercial, retail, and residential spaces across North America.
           </p>
-          <div class="sample-images">
-            <img src="/assets/images/services/1.jpg" alt="" />
-            <img src="/assets/images/services/3.jpg" alt="" />
-            <img src="/assets/images/services/2.jpg" alt="" />
+          <h3><b>MANUFACTURING</b></h3>
+          <div class="service-item">
+            <div>
+              <p>
+                Proudly made in Canada, our manufacturing process is built on
+                precision, craftsmanship, and full accountability from start to
+                finish. Operating from our state-of-the-art facility, we combine
+                advanced manufacturing technology with skilled workmanship to
+                produce high-quality custom millwork and retail fixtures
+                tailored to your exact specifications. Our experienced team
+                delivers custom architectural millwork solutions with
+                exceptional attention to detail in every project. This hands-on
+                approach ensures strict quality control and consistently
+                reliable results for commercial, retail, and residential
+                projects—regardless of size or complexity.
+              </p>
+            </div>
+            <div>
+              <img src="/assets/images/services/1.jpg" alt="" />
+            </div>
           </div>
-          <p>
-            We partner closely with architects, designers, and clients to
-            deliver seamless design-build solutions—from consultation and
-            material selection to prototyping and full project management.
-            Whether it’s office interiors, retail environments, hospitality
-            spaces, or high-end homes, our team ensures expert installation,
-            meticulous finishing, and on-time project completion.
-          </p>
+          <h3><b>DESIGN</b></h3>
+          <div class="service-item">
+            <div><img src="/assets/images/services/3.jpg" alt="" /></div>
+            <div>
+              <p>
+                Ready to elevate your retail space? Whether you’re starting from
+                scratch or refining an existing concept, we collaborate closely
+                with you to create innovative retail fixture design and custom
+                millwork solutions that bring your vision to life. We work
+                exclusively with certified designers and architects, ensuring
+                every project meets the highest standards of commercial interior
+                design, space planning, and architectural precision, while
+                maintaining full compliance with industry regulations.
+              </p>
+            </div>
+          </div>
+          <h3><b>INSTALLATION</b></h3>
+          <div class="service-item">
+            <div>
+              <p>
+                Our installation team understands every detail of your
+                fixtures—because we built them. We provide seamless,
+                professional fixture installation and millwork installation
+                services across Canada and the United States, ensuring
+                everything is installed correctly and performs as intended. We
+                also accommodate on-site adjustments and last-minute changes,
+                ensuring your custom retail fixtures and millwork systems meet
+                your exact requirements, even on tight timelines.
+              </p>
+            </div>
+            <div><img src="/assets/images/services/2.jpg" alt="" /></div>
+          </div>
         </div>
       </section>
       <section id="portfolio" class="section portfolio">
@@ -883,8 +928,11 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="map-wrapper">
+    <footer style="display: flex; flex-direction: column">
+      <div
+        class="map-wrapper"
+        style="max-width: 1200px; align-self: center; width: 100%"
+      >
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.8002815200407!2d-79.48219092442976!3d43.756243971097376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b31fb11bb5241%3A0xe4b8b8a3bbad15bf!2s49%20Bakersfield%20St%2C%20Toronto%2C%20ON%20M3J%201Z4!5e0!3m2!1sen!2sca!4v1775909967476!5m2!1sen!2sca"
           width="100%"
