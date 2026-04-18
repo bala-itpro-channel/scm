@@ -3,10 +3,7 @@
     <title>Sonoma Custom Millwork Inc.</title>
     <meta keywords="Sonoma Custom Millwork Inc" />
     <meta name="format-detection" content="telephone=no" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="format-detection" content="telephone=no" />
     <meta charset="UTF-8" />
     <meta author="Balakrishnan" />
@@ -24,7 +21,7 @@
     <link rel="icon" href="/assets/icons/favicon.png" sizes="32x32" />
     <link rel="stylesheet" href="styles.css?" />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"
       rel="stylesheet"
     />
     <style>
@@ -109,6 +106,7 @@
         background: white;
         max-width: 1200px;
         align-self: center;
+        min-height: 100svh;
         .container-header {
           background: #f5ede0;
           position: relative;
@@ -228,6 +226,17 @@
         text-underline-offset: 4px;
       }
 
+      a:focus {
+        outline: 3px solid #7a5a34;
+        outline-offset: 2px;
+      }
+
+      button:focus,
+      input:focus {
+        outline: 3px solid #7a5a34;
+        outline-offset: 2px;
+      }
+
       body {
         font-size: 16px;
         font-family: "Roboto", sans-serif;
@@ -264,7 +273,7 @@
         padding: 0 15px;
         display: flex;
         gap: 20px;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         font-size: 16px;
       }
@@ -403,8 +412,8 @@
       .side-menu-close:hover,
       .side-menu-close:focus {
         background: #ffffff;
-        transform: scale(1.08);
-        box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+        outline: 3px solid #3f2a13;
+        outline-offset: 2px;
       }
 
       .side-menu.active {
@@ -469,6 +478,9 @@
         border: 1px solid #d9cdc0;
         padding: 20px;
         border-radius: 5px;
+        max-width: 380px;
+        align-self: center;
+        width: 100%;
       }
 
       .map-wrapper {
@@ -591,6 +603,16 @@
         justify-content: center;
         box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
         z-index: 2;
+        transition: background 0.2s ease;
+      }
+
+      .slider-arrow:focus {
+        outline: 3px solid #7a5a34;
+        outline-offset: 2px;
+      }
+
+      .slider-arrow:hover {
+        background: rgba(255, 255, 255, 1);
       }
 
       .slider-arrow.prev {
@@ -685,8 +707,9 @@
         background: linear-gradient(135deg, #8a6a44 0%, #4f3a23 100%);
       }
 
-      .scroll-to-top:active {
-        transform: translateY(-1px);
+      .scroll-to-top:focus {
+        outline: 3px solid #f6e2c1;
+        outline-offset: 2px;
       }
 
       @media screen and (max-width: 767px) {
@@ -698,8 +721,53 @@
           font-size: 1.6rem;
         }
       }
+
+      .skip-link {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        background: #3f2a13;
+        color: #f6e2c1;
+        padding: 8px 16px;
+        text-decoration: none;
+        border-radius: 4px;
+        z-index: 10000;
+      }
+
+      .skip-link:focus {
+        top: 0;
+        outline: 3px solid #f6e2c1;
+        outline-offset: 2px;
+      }
+
+      .contact-social-media a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+      }
+
+      .contact-social-media a:hover svg {
+        color: #7a5a34;
+      }
+
+      .contact-social-media a:focus {
+        outline: 3px solid #7a5a34;
+        outline-offset: 4px;
+        border-radius: 4px;
+      }
+
+      .section.contact {
+        min-height: auto;
+        padding-bottom: 40px;
+      }
     </style>
     <!-- Google Tag Manager -->
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
+    ></script>
     <script
       async=""
       src="https://www.googletagmanager.com/gtm.js?id=GTM-T4SKP733"
@@ -719,45 +787,148 @@
     <!-- End Google Tag Manager -->
   </head>
   <body style="background: #f9f5f0">
+    <!-- Skip to Main Content Link -->
+    <a href="#page-main" class="skip-link">Skip to main content</a>
+
     <header>
       <div class="header-topbar">
         <div class="header-topbar-inner">
-          <span class="header-topbar-text hide-for-mobile"
-            >Have any questions?</span
+          <div
+            style="
+              display: flex;
+              padding: 0 15px;
+              display: flex;
+              gap: 20px;
+              align-items: center;
+              font-size: 15px;
+            "
           >
-          <a href="tel:+14162558060" class="topbar-link">
-            <div class="contact">
-              <span
-                ><svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  class="icon-highlight green"
-                >
-                  <path
-                    d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V21c0 .55-.45 1-1 1C10.07 22 2 13.93 2 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
-                  ></path></svg></span
-              ><span>(416) 255-8060</span>
-            </div>
-          </a>
+            <span class="header-topbar-text hide-for-mobile"
+              >Have any questions?</span
+            >
+            <a href="tel:+14162558060" class="topbar-link">
+              <div class="contact">
+                <span
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="icon-highlight green"
+                  >
+                    <path
+                      d="M6.62 10.79a15.91 15.91 0 0 0 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V21c0 .55-.45 1-1 1C10.07 22 2 13.93 2 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.24.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+                    ></path></svg></span
+                ><span>(416) 255-8060</span>
+              </div>
+            </a>
 
-          <a href="mailto:info@scm-inc.ca" class="topbar-link hide-for-mobile">
-            <div class="contact">
-              <span
-                ><svg
+            <a
+              href="mailto:info@scm-inc.ca"
+              class="topbar-link hide-for-mobile"
+            >
+              <div class="contact">
+                <span
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="icon-highlight yellow"
+                  >
+                    <path
+                      d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
+                    ></path></svg></span
+                ><span>Info@scm-inc.ca</span>
+              </div>
+            </a>
+          </div>
+          <div>
+            <div
+              class="contact-social-media"
+              style="
+                display: flex;
+                padding: 0 15px;
+                display: flex;
+                gap: 14px;
+                align-items: center;
+                /* font-size: 25px; */
+              "
+            >
+              <a
+                href="https://www.facebook.com/sonoma"
+                aria-label="Visit our Facebook page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  class="icon-highlight yellow"
+                  aria-hidden="true"
                 >
                   <path
-                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"
-                  ></path></svg></span
-              ><span>Info@scm-inc.ca</span>
+                    d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.88h-2.35v6.99A10 10 0 0 0 22 12"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/sonoma"
+                aria-label="Visit our Instagram page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/sonoma"
+                aria-label="Visit our LinkedIn page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v14H0V8zm7.5 0h4.7v1.9h.07c.66-1.25 2.27-2.57 4.67-2.57C21.42 7.33 24 9.52 24 13.88V22h-5v-7.1c0-1.7-.03-3.88-2.36-3.88-2.36 0-2.72 1.84-2.72 3.75V22h-5V8z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/sonoma"
+                aria-label="Visit our YouTube channel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.96-2.36-1.02C16.8 2.5 12 2.5 12 2.5h0s-4.8 0-8.2.32c-.46.06-1.46.07-2.36 1.02C.73 4.56.5 6.2.5 6.2S0 8.12 0 10.04v1.92c0 1.92.5 3.84.5 3.84s.23 1.64.94 2.36c.9.95 2.08.92 2.6 1.02 1.9.18 8.06.32 8.06.32s4.8 0 8.2-.32c.46-.06 1.46-.07 2.36-1.02.71-.72.94-2.36.94-2.36s.5-1.92.5-3.84v-1.92c0-1.92-.5-3.84-.5-3.84zM9.75 14.5v-5l5 2.5-5 2.5z"
+                  ></path>
+                </svg>
+              </a>
             </div>
-          </a>
+          </div>
         </div>
       </div>
       <div id="intro" class="hero-banner">
@@ -814,7 +985,7 @@
         <a href="#contact-us">Contact Us</a>
       </nav>
     </header>
-    <main class="page-main">
+    <main class="page-main" id="page-main">
       <div class="slider">
         <div class="slider-track" style="transform: translateX(-300%)">
           <div class="slide">
@@ -875,7 +1046,11 @@
       </div>
       <section id="about-us" class="section">
         <div class="container-header">
-          <img src="/assets/images/aboutus/2.jpg" alt="" class="img-header" />
+          <img
+            src="/assets/images/aboutus/2.jpg"
+            alt="About Us - Custom millwork quality and craftsmanship"
+            class="img-header"
+          />
           <div class="title-bar">About Us</div>
         </div>
         <div class="text-container">
@@ -1076,54 +1251,78 @@
               ><span>Info@scm-inc.ca</span>
             </div>
             <div class="contact-social-media">
-              <div>
+              <a
+                href="https://www.facebook.com/sonoma"
+                aria-label="Visit our Facebook page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     d="M22 12a10 10 0 1 0-11.56 9.87v-6.99H7.9V12h2.54V9.8c0-2.5 1.5-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.25 0-1.64.77-1.64 1.56V12h2.8l-.45 2.88h-2.35v6.99A10 10 0 0 0 22 12"
                   ></path>
                 </svg>
-              </div>
-              <div>
+              </a>
+              <a
+                href="https://www.instagram.com/sonoma"
+                aria-label="Visit our Instagram page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0z"
                   ></path>
                 </svg>
-              </div>
-              <div>
+              </a>
+              <a
+                href="https://www.linkedin.com/company/sonoma"
+                aria-label="Visit our LinkedIn page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v14H0V8zm7.5 0h4.7v1.9h.07c.66-1.25 2.27-2.57 4.67-2.57C21.42 7.33 24 9.52 24 13.88V22h-5v-7.1c0-1.7-.03-3.88-2.36-3.88-2.36 0-2.72 1.84-2.72 3.75V22h-5V8z"
                   ></path>
                 </svg>
-              </div>
-              <div>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/sonoma"
+                aria-label="Visit our YouTube channel"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <svg
                   width="24"
                   height="24"
                   viewBox="0 0 24 24"
                   fill="currentColor"
+                  aria-hidden="true"
                 >
                   <path
                     d="M23.5 6.2s-.23-1.64-.94-2.36c-.9-.95-1.9-.96-2.36-1.02C16.8 2.5 12 2.5 12 2.5h0s-4.8 0-8.2.32c-.46.06-1.46.07-2.36 1.02C.73 4.56.5 6.2.5 6.2S0 8.12 0 10.04v1.92c0 1.92.5 3.84.5 3.84s.23 1.64.94 2.36c.9.95 2.08.92 2.6 1.02 1.9.18 8.06.32 8.06.32s4.8 0 8.2-.32c.46-.06 1.46-.07 2.36-1.02.71-.72.94-2.36.94-2.36s.5-1.92.5-3.84v-1.92c0-1.92-.5-3.84-.5-3.84zM9.75 14.5v-5l5 2.5-5 2.5z"
                   ></path>
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
         </div>
