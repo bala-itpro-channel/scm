@@ -1,33 +1,106 @@
+/* ========================================
+   CSS STYLESHEET - SONOMA CUSTOM MILLWORK
+   ========================================
+   
+   This stylesheet contains all styling for the Sonoma Custom Millwork website.
+   It uses CSS custom properties (variables) for consistent theming and easy maintenance.
+   
+   STRUCTURE:
+   1. CSS Variables (Color Palette & Semantic Aliases)
+   2. Global Base Styles
+   3. Typography Styles
+   4. Header & Navigation Components
+   5. Hero Section & Main Content Areas
+   6. Slider/Carousel Component
+   7. Footer
+   8. Utility Classes & Miscellaneous Styles
+   9. Responsive Design (Mobile Styles)
+   
+   COLOR SYSTEM:
+   - Uses semantic naming convention: --color-[category]-[shade/function]
+   - All hardcoded colors removed; uses CSS variables for theming
+   - Easy to update theme by modifying :root variables only
+   
+   BREAKPOINTS:
+   - Mobile: 767px and below (tablet/phone)
+   - Desktop: 768px and above
+   
+   FONTS:
+   - Headings: "DM Sans" (font-weight: 700)
+   - Body text: "Roboto" (font-size: 16px)
+   
+   THEME COLORS (Semantic Variables):
+   - Use --color-text-* for all text elements (primary, secondary, light, accent)
+   - Use --color-background-* for page/section backgrounds
+   - Use --color-link and --color-link-hover for anchor elements
+   - Use --color-border for borders and dividers
+   - Use --color-overlay-dark for dark overlays on images
+   
+   To update the entire theme, modify the semantic variables in :root.
+   Example: Change --color-text-primary to affect all primary text globally.
+   
+   Last Updated: 2025
+   ======================================== */
+
+/* ========================================
+   1. CSS VARIABLES - COLOR PALETTE
+   ======================================== */
+
 :root {
-  /* Primary Color Palette - Brown/Earth Tones */
-  --color-primary-darkest: #2d1a05;
-  --color-primary-dark: #3f2a13;
-  --color-primary-medium: #644828;
-  --color-primary-light: #7a5a34;
-  --color-primary-light-hover: #8a6a44;
-  --color-primary-dark-hover: #4f3a23;
+  /* PRIMARY COLOR PALETTE - Brown/Earth Tones
+     Used for main branding, headers, and prominent elements
+     6 variations from darkest to lightest for flexibility in design */
+  --color-primary-darkest: #2d1a05; /* Darkest brown for deep backgrounds */
+  --color-primary-dark: #3f2a13; /* Dark brown for headers/nav */
+  --color-primary-medium: #644828; /* Medium brown for section headers */
+  --color-primary-light: #7a5a34; /* Light brown for accents */
+  --color-primary-light-hover: #8a6a44; /* Lighter brown on hover */
+  --color-primary-dark-hover: #4f3a23; /* Darker brown on hover */
 
-  /* Accent Colors */
-  --color-accent-gold: #eccd79;
-  --color-accent-tan: #f9d7b1;
+  /* ACCENT COLORS
+     Used for highlights, special states, and calls-to-action
+     Provides warm gold and tan tones for emphasis */
+  --color-accent-gold: #eccd79; /* Gold for hover states */
+  --color-accent-tan: #f9d7b1; /* Tan for buttons/highlights */
 
-  /* Neutral Colors - Background & Text */
-  --color-neutral-white: #ffffff;
-  --color-neutral-cream: #f9f5f0;
-  --color-neutral-cream-light: #f5ede0;
-  --color-neutral-light-tan: #f6e2c1;
-  --color-neutral-beige: #f0e6d8;
-  --color-neutral-off-white: #fff8eb;
-  --color-neutral-very-light: #fffafa;
-  --color-neutral-gray-light: #f2efef;
-  --color-neutral-gray-medium: #e8dcc8;
-  --color-neutral-gray-warm: #d9cdc0;
-  --color-neutral-gray-dark: #454849;
-  --color-neutral-dark-gray: #323231;
-  --color-neutral-text: #4f504c;
-  --color-neutral-dark-text: #000000;
+  /* NEUTRAL COLORS - Backgrounds & Text
+     Complete range from white to dark gray for flexibility
+     Used for backgrounds, text, borders, and overlays
+     14 variations allow fine-tuned design control */
+  --color-neutral-white: #ffffff; /* Pure white */
+  --color-neutral-cream: #f9f5f0; /* Primary background cream */
+  --color-neutral-cream-light: #f5ede0; /* Lighter cream variant */
+  --color-neutral-light-tan: #f6e2c1; /* Light tan */
+  --color-neutral-beige: #f0e6d8; /* Warm beige */
+  --color-neutral-off-white: #fff8eb; /* Off-white with warm tint */
+  --color-neutral-very-light: #fffafa; /* Nearly white */
+  --color-neutral-gray-light: #f2efef; /* Very light gray */
+  --color-neutral-gray-medium: #e8dcc8; /* Medium gray */
+  --color-neutral-gray-warm: #d9cdc0; /* Warm gray */
+  --color-neutral-gray-dark: #454849; /* Dark gray */
+  --color-neutral-dark-gray: #323231; /* Very dark gray for footer */
+  --color-neutral-text: #4f504c; /* Standard text color */
+  --color-neutral-dark-text: #000000; /* Dark text/headings */
 
-  /* Semantic Color Aliases */
+  /* SEMANTIC COLOR ALIASES
+     These variables provide semantic meaning and make theme updates easier
+     Instead of using color names directly, use these semantic aliases
+     To update the entire theme, only change these variable values
+     
+     THEMING INSTRUCTIONS:
+     1. Primary text: --color-text-primary (headings, main content)
+     2. Secondary text: --color-text-secondary (body text, descriptions)
+     3. Light text: --color-text-light (text on dark backgrounds)
+     4. Accent text: --color-text-accent (special emphasis)
+     5. Page background: --color-background-primary (main page)
+     6. Section background: --color-background-secondary (white sections)
+     7. Interactive: --color-link (default), --color-link-hover (on hover)
+     8. Dividers: --color-border (lines, separators)
+     9. Overlays: --color-overlay-dark (dark overlay on images)
+     
+     To theme the entire site, update these semantic variables only.
+     All other CSS rules reference these variables automatically.
+  */
   --color-text-primary: var(--color-neutral-dark-text);
   --color-text-secondary: var(--color-neutral-text);
   --color-text-light: var(--color-neutral-white);
@@ -40,87 +113,74 @@
   --color-overlay-dark: rgba(59, 59, 59, 0.4);
 }
 
+/* ========================================
+   2. GLOBAL BASE STYLES
+   ======================================== */
+
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--color-background-primary);
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: var(--color-text-primary);
 }
 
-header {
-  .topbar-content {
-    display: flex;
-    padding: 0 15px;
-    gap: 20px;
-    align-items: center;
-    font-size: 15px;
-  }
+/* ========================================
+   3. TYPOGRAPHY STYLES
+   ======================================== */
 
-  .contact-social-media {
-    display: flex;
-    padding: 0 15px;
-    gap: 14px;
-    align-items: center;
-  }
+/* Heading Styles
+   All headings use DM Sans font family */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-main {
-  .slider-track {
-    transform: translateX(-300%);
-  }
+p {
+  padding-bottom: 24px;
 }
 
-footer {
-  display: flex;
-  flex-direction: column;
-
-  .map-wrapper {
-    max-width: 1200px;
-    align-self: center;
-    width: 100%;
-  }
+/* Link Styles */
+a {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
-/* About Us page styles */
-.welcome-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: "Times New Roman";
-  letter-spacing: normal;
+a:focus {
+  outline: 3px solid var(--color-link);
+  outline-offset: 2px;
 }
 
-.logo-height {
-  height: 100px;
+/* Interactive Element Focus States
+   Applied to buttons and inputs for accessibility */
+button:focus,
+input:focus {
+  outline: 3px solid var(--color-link);
+  outline-offset: 2px;
 }
 
-.nav-list {
-  display: flex;
-  list-style: none;
-  color: white;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 0;
-  margin-top: 0;
-  flex-wrap: wrap;
-}
+/* ========================================
+   4. HEADER & NAVIGATION
+   ======================================== */
 
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.center-text {
-  text-align: center;
-}
-
-/* Global Styles */
+/* Top Bar (Contact Info)
+   Dark brown background with contact information and social links */
 * {
   padding: 0;
   margin: 0;
@@ -402,7 +462,6 @@ h6 {
 .header-topbar-inner {
   width: 100%;
   max-width: 1200px;
-  padding: 0 15px;
   display: flex;
   gap: 20px;
   justify-content: space-between;
@@ -443,6 +502,7 @@ h6 {
   padding: 20px;
 }
 
+/* Desktop Navigation Menu */
 .hero-menu-label {
   color: var(--color-text-light);
   display: flex;
@@ -470,6 +530,7 @@ h6 {
   text-shadow: 0 0 10px rgba(255, 221, 150, 0.35);
 }
 
+/* Mobile Hamburger Menu Toggle Button */
 .burger-toggle {
   position: fixed;
   width: 5svh;
@@ -489,6 +550,8 @@ h6 {
   height: 100%;
 }
 
+/* Side Menu (Mobile Navigation)
+   Slides in from right side with gradient background */
 .side-menu {
   position: fixed;
   top: 0;
@@ -514,6 +577,11 @@ h6 {
   position: fixed;
 }
 
+.side-menu.active {
+  transform: translateX(0);
+}
+
+/* Close Button for Side Menu */
 .side-menu-close {
   position: absolute;
   top: 16px;
@@ -553,10 +621,7 @@ h6 {
   outline-offset: 2px;
 }
 
-.side-menu.active {
-  transform: translateX(0);
-}
-
+/* Side Menu Logo */
 .side-menu .menu-logo {
   display: flex;
   justify-content: center;
@@ -571,6 +636,7 @@ h6 {
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
 }
 
+/* Side Menu Links */
 .side-menu a {
   color: var(--color-neutral-off-white);
   text-decoration: none;
@@ -597,16 +663,227 @@ h6 {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
 }
 
+/* ========================================
+   5. HERO SECTION & MAIN CONTENT
+   ======================================== */
+
+/* Hero Section with Video and Text Overlay */
+.video-section {
+  max-height: 100svh;
+}
+
+video {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+}
+
+/* Text and Description Overlay on Video
+   Positioned at bottom with semi-transparent background */
+.head-and-desc {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text-light);
+  bottom: 0;
+  width: 100%;
+  background: var(--color-overlay-dark);
+  padding: 10px;
+  padding-bottom: 60px;
+  z-index: 1;
+}
+
+.head-and-desc div {
+  font-size: 3vh;
+  padding: 4px 30px;
+  background: var(--color-primary-darkest);
+  border-radius: 15px;
+  letter-spacing: 1px;
+}
+
+.head-and-desc h1 {
+  font-size: 9vh;
+  font-weight: 700;
+  -webkit-text-stroke: 1px var(--color-primary-darkest);
+  line-height: 8vh;
+}
+
+.head-and-desc .learnmore {
+  padding: 10px;
+  font-size: 3vh;
+  border-radius: 10px;
+  color: var(--color-primary-darkest);
+  border: 1px solid var(--color-primary-darkest);
+  cursor: pointer;
+  background-color: var(--color-neutral-very-light);
+  text-decoration: none;
+}
+
+.head-and-desc h1,
+.head-and-desc div,
+.head-and-desc .learnmore {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .head-and-desc {
+    bottom: 0;
+    padding-bottom: 30px;
+  }
+
+  .head-and-desc h1 {
+    font-size: 6.5vh;
+    line-height: 7vh;
+  }
+
+  .head-and-desc div {
+    font-size: 2.5vh;
+  }
+}
+
+/* Main Page Content Container */
 .page-main {
   display: flex;
   flex-direction: column;
   justify-self: center;
 }
 
-.portfolio-header {
-  background: var(--color-neutral-cream-light);
+/* Content Section Wrapper
+   Used for About Us, Services, Portfolio, Contact sections */
+.section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-background-secondary);
+  max-width: 1200px;
+  align-self: center;
+  min-height: 100svh;
 }
 
+/* Section Header with Background Image */
+.section .container-header {
+  background: var(--color-primary-medium);
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section .container-header .img-header {
+  width: 100%;
+  object-fit: cover;
+  height: 40svh;
+  object-position: left;
+  clip-path: polygon(100% 0, 100% 67%, 0 100%, 0 0);
+}
+
+.section .container-header .img-header.service {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 67%);
+}
+
+.section .container-header .img-header.portfolio {
+  clip-path: polygon(100% 0, 100% 67%, 0 100%, 0 0);
+}
+
+.section .container-header .title-bar {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 6svh;
+  color: var(--color-text-light);
+  -webkit-text-stroke: 1px var(--color-neutral-gray-dark);
+  font-weight: 800;
+  font-family: "DM Sans", sans-serif;
+  padding: 0 10px;
+}
+
+.section .container-header .title-bar.services {
+  left: 0;
+  bottom: 0;
+}
+
+/* Section Content Area */
+.section .text-container {
+  padding: 20px;
+  text-align: justify;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  line-height: 30px;
+  color: var(--color-text-secondary);
+  padding-top: 30px;
+}
+
+.section .text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section .text-container.services {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Image Gallery in Section */
+.section .text-container .sample-images {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 24px;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.section .text-container .sample-images img {
+  max-width: 300px;
+  border-radius: 10px;
+  border: 2px solid var(--color-primary-darkest);
+  flex-shrink: 1;
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+}
+
+/* Contact Icons */
+.section .text-container .contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Full Gallery Link */
+.section .text-container .full-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contact Section Specific Styles */
+.section .text-container.contact {
+  gap: 20px;
+  flex-direction: column;
+}
+
+.section .text-container.contact .contact-social-media {
+  display: flex;
+  gap: 20px;
+  align-self: center;
+  padding: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--color-border);
+  padding-bottom: 4px;
+}
+
+/* Contact Panel (Info Box) */
 .contact-panel {
   display: flex;
   justify-content: center;
@@ -620,55 +897,34 @@ h6 {
   width: 100%;
 }
 
-.map-wrapper {
-  min-height: 300px;
+/* Portfolio Header Specific */
+.portfolio-header {
+  background: var(--color-neutral-cream-light);
 }
 
-.footer-site {
+/* Service Items (Side-by-side layout) */
+.service-item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: var(--color-neutral-dark-gray);
-  color: var(--color-neutral-very-light);
-  padding: 20px;
+  gap: 20px;
 }
 
-.footer-text-center {
-  text-align: center;
-  padding-bottom: 10px;
-  font-family: "Roboto", sans-serif;
+.service-item div {
+  width: 50%;
 }
 
-.footer-link {
-  color: var(--color-neutral-very-light);
-  font-family: "Roboto", sans-serif;
+.service-item div img {
+  width: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+  padding-top: 8px;
+  max-height: 360px;
 }
 
-.footer-caption {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-}
+/* ========================================
+   6. SLIDER/CAROUSEL
+   ======================================== */
 
-.icon-highlight.green {
-  color: yellowgreen;
-}
-
-.icon-highlight.yellow {
-  color: yellow;
-}
-
-.iframe-reset {
-  border: 0;
-  padding: 0;
-  margin: 0;
-  display: block;
-}
-
-.hidden-iframe {
-  display: none;
-  visibility: hidden;
-}
+/* Main Slider Container */
 
 .slider {
   position: relative;
@@ -871,6 +1127,8 @@ h6 {
   }
 }
 
+/* Skip-to-Main-Content Link (Accessibility)
+   Visible on focus for screen reader users */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -889,25 +1147,70 @@ h6 {
   outline-offset: 2px;
 }
 
-.contact-social-media a {
+/* About Us Page Specific Styles */
+.welcome-header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  text-decoration: none;
-  transition: transform 0.2s ease;
+  align-items: center;
+  font-family: "Times New Roman";
+  letter-spacing: normal;
 }
 
-.contact-social-media a:hover svg {
-  color: var(--color-link);
+.logo-height {
+  height: 100px;
 }
 
-.contact-social-media a:focus {
-  outline: 3px solid var(--color-link);
-  outline-offset: 4px;
-  border-radius: 4px;
+.nav-list {
+  display: flex;
+  list-style: none;
+  color: white;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  flex-wrap: wrap;
 }
 
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-text {
+  text-align: center;
+}
+
+/* Contact Section Special Styling */
 .section.contact {
   min-height: auto;
   padding-bottom: 40px;
 }
+
+/* ========================================
+   9. RESPONSIVE DESIGN - MOBILE STYLES
+   ======================================== */
+
+@media screen and (max-width: 767px) {
+  /* Hide desktop navigation on mobile */
+  .hide-for-mobile {
+    display: none;
+  }
+
+  /* Stack service items vertically on mobile */
+  .service-item {
+    flex-direction: column;
+  }
+
+  .service-item div {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   END OF STYLESHEET
+   ======================================== */
