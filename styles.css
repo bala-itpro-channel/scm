@@ -149,6 +149,17 @@ header .topbar-content {
   align-items: center;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+
+  .map-wrapper {
+    max-width: 1200px;
+    align-self: center;
+    width: 100%;
+  }
+}
+
 /* ========================================
    3. TYPOGRAPHY STYLES
    ======================================== */
@@ -420,6 +431,13 @@ header .contact {
   gap: 6px;
 }
 
+.contact-social-media {
+  display: flex;
+  padding: 0 15px;
+  gap: 14px;
+  align-items: center;
+}
+
 footer .menu {
   display: flex;
   align-items: center;
@@ -431,6 +449,46 @@ footer .menu {
 
 footer .menu a {
   color: var(--color-text-light);
+}
+
+footer .menu span {
+  color: var(--color-text-light);
+}
+
+.footer-site {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: var(--color-neutral-dark-gray);
+  width: 100%;
+}
+
+.footer-text-center {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 14px;
+}
+
+.footer-caption {
+  text-align: center;
+  color: var(--color-text-light);
+  font-size: 14px;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.footer-link {
+  color: var(--color-accent-gold) !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.footer-link:hover {
+  color: var(--color-accent-tan) !important;
 }
 
 a {
@@ -501,6 +559,30 @@ h6 {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
 }
+/* 
+.icon-highlight.green {
+  color: rgb(3, 221, 3);
+}
+
+.icon-highlight.yellow {
+  color: rgb(207, 248, 22);
+}
+
+.font-icon-btn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+} */
 
 .hero-banner {
   width: 100%;
@@ -938,14 +1020,13 @@ video {
   width: 100%;
   border-radius: 4px;
   object-fit: cover;
-  padding-top: 8px;
+  margin-top: 8px;
   max-height: 360px;
 }
 
 /* ========================================
    6. SLIDER/CAROUSEL
    ======================================== */
-
 /* Main Slider Container */
 
 .slider {
@@ -1101,7 +1182,7 @@ video {
     var(--color-primary-light) 0%,
     var(--color-primary-dark) 100%
   );
-  color: var(--color-neutral-light-tan);
+  color: #f5f2ec;
   border: 2px solid rgba(246, 226, 193, 0.5);
   cursor: pointer;
   font-size: 1.8rem;
@@ -1219,7 +1300,7 @@ video {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
   padding: 20px 0;
-  max-width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
