@@ -70,7 +70,7 @@
   --color-neutral-white: #ffffff; /* Pure white */
   --color-neutral-cream: #f9f5f0; /* Primary background cream */
   --color-neutral-cream-light: #f5ede0; /* Lighter cream variant */
-  --color-neutral-light-tan: #f6e2c1; /* Light tan */
+  --color-neutral-light-tan: #9b6100; /* Light tan */
   --color-neutral-beige: #f0e6d8; /* Warm beige */
   --color-neutral-off-white: #fff8eb; /* Off-white with warm tint */
   --color-neutral-very-light: #fffafa; /* Nearly white */
@@ -1244,7 +1244,7 @@ video {
 
 .gallery-item img {
   max-width: 100%;
-  max-height: 80px;
+  max-height: 150px;
   object-fit: contain;
   filter: grayscale(100%);
   transition: filter 0.3s ease;
