@@ -636,7 +636,7 @@ h6 {
 
 /* Mobile Hamburger Menu Toggle Button */
 .burger-toggle {
-  position: fixed;
+  position: absolute;
   width: 5svh;
   height: 5svh;
   background: var(--color-accent-tan);

@@ -462,6 +462,11 @@
         const isOpen = menu.classList.toggle("active");
         menu.setAttribute("aria-expanded", isOpen);
         button.setAttribute("aria-expanded", isOpen);
+        if (isOpen) {
+          button.style.display = "none";
+        } else {
+          button.style.display = "";
+        }
       }
 
       function closeSideMenu() {
@@ -474,6 +479,7 @@
           menu.classList.remove("active");
           menu.setAttribute("aria-expanded", false);
           button.setAttribute("aria-expanded", false);
+          button.style.display = "";
         }
       }
 

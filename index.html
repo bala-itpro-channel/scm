@@ -377,9 +377,9 @@
           <img
             src="/assets/images/aboutus/2.jpg"
             alt="About Us - Custom millwork quality and craftsmanship"
-            class="img-header"
+            class="img-header service"
           />
-          <div class="title-bar">About Us</div>
+          <div class="title-bar services">About Us</div>
         </div>
         <div class="text-container">
           <p>
@@ -852,6 +852,11 @@
         const isOpen = menu.classList.toggle("active");
         menu.setAttribute("aria-expanded", isOpen);
         button.setAttribute("aria-expanded", isOpen);
+        if (isOpen) {
+          button.style.display = "none";
+        } else {
+          button.style.display = "";
+        }
       }
 
       function closeSideMenu() {
@@ -864,6 +869,7 @@
           menu.classList.remove("active");
           menu.setAttribute("aria-expanded", false);
           button.setAttribute("aria-expanded", false);
+          button.style.display = "";
         }
       }
 
