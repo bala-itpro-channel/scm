@@ -934,6 +934,94 @@ video {
   gap: 20px;
 }
 
+/* Image Gallery in Section - Responsive Grid */
+.section .text-container .image-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding-bottom: 24px;
+  width: 100%;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section .text-container .image-grid .image-link {
+  text-decoration: none;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.section .text-container .image-grid .image-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.section .text-container .image-grid .image-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-primary-darkest);
+}
+
+.section .text-container .image-grid img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
+  object-fit: fill;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.section .text-container .image-grid .image-link:hover img {
+  transform: scale(1.01);
+}
+
+.section .text-container .image-grid .image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: rgba(80, 80, 80, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-neutral-white);
+  font-weight: 500;
+  font-size: 17px;
+  padding: 6px;
+  text-align: center;
+}
+
+/* Tablet - 2 columns */
+@media screen and (min-width: 768px) {
+  .section .text-container .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop - 3 columns */
+@media screen and (min-width: 1024px) {
+  .section .text-container .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Large Desktop - 4 columns */
+@media screen and (min-width: 1400px) {
+  .section .text-container .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* Image Gallery in Section */
 .section .text-container .sample-images {
   display: flex;
