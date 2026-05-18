@@ -136,6 +136,14 @@
     <!-- Site header: top bar, branding, desktop navigation, and mobile menu -->
     <header>
       <div id="intro" class="header-topbar">
+        <marquee behavior="scroll" direction="">
+          Welcome to Sonoma Custom Millwork Inc.! This site is under
+          construction. Please check back soon for updates and our full
+          portfolio of work. Thank you for your patience! - Website design and
+          development by Web Frontier Technologies
+        </marquee>
+      </div>
+      <div id="intro" class="header-topbar">
         <div class="header-topbar-inner">
           <div class="topbar-content">
             <span class="header-topbar-text hide-for-mobile"
@@ -933,6 +941,12 @@
           });
         });
       });
+
+      setTimeout(() => {
+        alert(
+          "This is demo website created for SCM Inc developed by Web Frontier Technologies. For accurate information, please contact SCM Inc. directly.",
+        );
+      }, 8000);
     </script>
     <!-- Scroll to Top Button -->
     <button
